@@ -6,3 +6,11 @@ exports.mainPage = (req, res)=>{
     })
    
 };
+
+exports.errorPage = (req, res)=>{
+     
+    res.json({
+        message: "Error 404(Page not found)",
+    })
+   
+};
