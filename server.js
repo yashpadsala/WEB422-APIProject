@@ -8,6 +8,7 @@ require('dotenv').config({ path: 'config/keys.env' });
 
 const CustomerController = require("./controllers/customerController.js");
 const ProductController = require("./controllers/productController.js");
+const combineController = require("./controllers/combineController.js");
 
 
 if(process.env.NODE_ENV!="production")
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use("/customers", CustomerController);
 app.use("/products", ProductController);
+app.use("/", combineController);
 
 
 //const PORT = 8080;
